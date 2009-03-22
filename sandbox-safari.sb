@@ -9,22 +9,8 @@
 (allow process-exec (regex "^/Applications/Safari.app/Contents/MacOS")) 
 (allow mach-lookup)
 
-;; Allow to read these files:
-(allow file-read*
-;; (regex
-;; #"^/Users/torsten/$"
-;; #"^/Users/torsten/Downloads/"
-;; #"^/Users/torsten/Library/"
-;; #"^/Users/torsten/wcz/"
-;; #"^/Applications/Safari.app"
-;; #"^/Library/"
-;; #"^/System/Library/"
-;; #"^/usr/lib/"
-;; #"^/usr/share/"
-;; #"^/private/"
-;; #"^/dev/"
-;; )
-)
+;; Read anything
+(allow file-read*)
 
 ;; Allow to write these files:
 (allow file-write*
