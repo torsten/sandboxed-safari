@@ -2,11 +2,13 @@
 
 ## What? Why?
 
-Safari is one of the most insecure browsers, [Pwn2Own](http://dvlabs.tippingpoint.com/blog/2009/03/18/pwn2own-2009-day-1---safari-internet-explorer-and-firefox-taken-down-by-four-zero-day-exploits) just demonstrated it again.  But so are all browsers, there will always be zero-day exploits.  Google's Chrome got not exploited in the contest.  Why?  Well, one reason is, it uses sand-boxing.
+Even [Safari](http://www.apple.com/safari/) is not a 100% secure browser, [Pwn2Own](http://dvlabs.tippingpoint.com/blog/2009/03/18/pwn2own-2009-day-1---safari-internet-explorer-and-firefox-taken-down-by-four-zero-day-exploits) just demonstrated it again.  But so are all browsers, there will always be zero-day exploits.  Google's Chrome got not exploited in the contest.  Why?  Well, one reason is it uses sand-boxing.
 
 But we love Safari, because it's Cocoa and feels like a real Mac app and stuff, right?  So lets just make Safari more secure.  Luckily Leopard provides a way to do this, it's called [sandbox-exec(1)](http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man1/sandbox-exec.1.html#//apple_ref/doc/man/1/sandbox-exec).
 
-This mini-project just uses Leopards bundled tools to ensure Safari can't execute other programs or write to files anywhere on the file-systems where it is not supposed to write to and this gives way more security against exploits than a out of the box Safari has.
+This mini-project just uses Leopards bundled tools to ensure Safari can't execute other programs or write to files anywhere on the file-systems where it is not supposed to write to and this gives you way more security against exploits than a out of the box Safari has.
+
+Even if an attacker gets into the Safari process, he will not be able to execute another process from it or write to critical file system paths to install something permanent on your system.  This doesn't protect against the all attack-vectors but against the more common ones.
 
 All this is based on what I found in [wishi's blog post](http://wishinet.blogspot.com/2009/03/applying-sandbox-exec-around-safari.html).
 
