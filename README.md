@@ -13,8 +13,8 @@ All this is based on what I found in [wishi's blog post](http://wishinet.blogspo
 
 ## Installation
 
-1. Grab the tarball from [github](http://)
-2. Extract it <pre>$ tar vxzf ...</pre>
+1. Grab the tarball from [github](http://github.com/torsten/sandboxed-safari/tarball/master).
+2. Extract it <pre>$ tar vxzf torsten-sandboxed-safari.tar.gz</pre>
 3. Run the customize.rb script <pre>$ ruby customize.rb</pre> This will patch the policy file and the wrapper script with the locations of the files on your Mac.  You can also customize the 2 files on your own (it's not much work).  But just using the script is way more convenient.
 
 4. Do what it says <pre>
