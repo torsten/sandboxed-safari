@@ -15,9 +15,12 @@
 ;; Allow to write these files:
 (allow file-write*
 (regex
+; Required for converting .ps to .pdf on the fly
+#"^/Library/Caches/"
 #"^/Users/torsten/Downloads/"
 #"^/Users/torsten/Library/Caches/"
 #"^/Users/torsten/Library/Cookies/"
+; CoreFoundation used temp files when writing settings
 #"^/Users/torsten/Library/Preferences/cfx"
 #"^/Users/torsten/Library/Preferences/com.apple.Safari."
 #"^/Users/torsten/Library/Safari/"
