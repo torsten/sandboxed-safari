@@ -24,6 +24,7 @@
 #"^HOME/Downloads/"
 #"^HOME/Library/Caches/"
 #"^HOME/Library/Cookies/"
+#"^HOME/Library/Keychains/"
 ; CoreFoundation used temp files when writing settings
 #"^HOME/Library/Preferences/cfx"
 #"^HOME/Library/Preferences/com.apple.Safari."

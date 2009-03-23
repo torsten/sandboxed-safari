@@ -24,6 +24,16 @@ $ cp sandboxed-safari.sh /Applications/Safari.app/Contents/MacOS/Safari
 
 5. After this, try restarting Safari and try to download a file.  If you can't save it to your home directory, everything should be working.
 
+## Uninstall
+
+1. Rename the original Safari executable <pre>
+$ mv /Applications/Safari.app/Contents/MacOS/Safari.orig /Applications/Safari.app/Contents/MacOS/Safari
+</pre>
+
+2. Delete the policy file <pre>
+$ rm /Applications/Safari.app/Contents/MacOS/safari-policy.sb
+</pre>
+
 
 ## Limitations
 
