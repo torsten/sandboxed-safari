@@ -17,6 +17,10 @@
 (regex
 ; Required for converting .ps to .pdf on the fly
 #"^/Library/Caches/"
+#"^/dev/dtracehelper"
+#"^/private/tmp"
+#"^/private/var/folders/"
+#"^/private/var/tmp"
 #"^HOME/Downloads/"
 #"^HOME/Library/Caches/"
 #"^HOME/Library/Cookies/"
@@ -24,10 +28,6 @@
 #"^HOME/Library/Preferences/cfx"
 #"^HOME/Library/Preferences/com.apple.Safari."
 #"^HOME/Library/Safari/"
-#"^/dev/dtracehelper"
-#"^/private/tmp/"
-#"^/private/var/folders/"
-#"^/private/var/tmp/"
 )
 )
 
