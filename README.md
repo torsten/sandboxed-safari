@@ -15,13 +15,15 @@ All this is based on what I found in [wishi's blog post](http://wishinet.blogspo
 
 ## Installation
 
-1. Grab the tarball from [github](http://github.com/torsten/sandboxed-safari/tarball/master).
-2. Extract it <pre>$ tar vxzf torsten-sandboxed-safari.tar.gz</pre>
+1. Grab the tarball from [GitHub](http://github.com/torsten/sandboxed-safari/tarball/master).
+2. Extract it <pre>$ tar vxzf torsten-sandboxed-safari&lt;TAB>.tar.gz</pre>
+2. Switch to the directory <pre>cd torsten-sandboxed-safari&lt;TAB></pre>
 3. Run the customize.rb script <pre>$ ruby customize.rb</pre> This will patch the policy file and the wrapper script with the locations of the files on your Mac.  You can also customize the 2 files on your own (it's not much work).  But just using the script is way more convenient.
 
 4. Do what it says <pre>
 $ mv /Applications/Safari.app/Contents/MacOS/Safari /Applications/Safari.app/Contents/MacOS/Safari.orig
 $ cp sandboxed-safari.sh /Applications/Safari.app/Contents/MacOS/Safari
+$ cp safari-policy.sb /Applications/Safari.app/Contents/MacOS/
 </pre>
 
 5. After this, try restarting Safari and try to download a file.  If you can't save it to your home directory, everything should be working.
@@ -43,7 +45,7 @@ I just tested it with Safari 3.2.1 (5525.27.1), I don't know how the 4.0 beta re
 
 In its current configuration it is not possible to download files do anywhere else than ~/Downloads/.  If you want to have this feature you can just add the line
 <pre>
-#"^/Users/your_user_name/"
+&#x23;"^/Users/your_user_name/"
 </pre>
 To the other write-allowed paths.
 
