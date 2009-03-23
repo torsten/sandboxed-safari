@@ -6,11 +6,9 @@ Safari is one of the most insecure browsers, [Pwn2Own](http://dvlabs.tippingpoin
 
 But we love Safari, because it's Cocoa and feels like a real Mac app and stuff, right?  So lets just make Safari more secure.  Luckily Leopard provides a way to do this, it's called [sandbox-exec(1)](http://developer.apple.com/DOCUMENTATION/DARWIN/Reference/ManPages/man1/sandbox-exec.1.html#//apple_ref/doc/man/1/sandbox-exec).
 
-This mini-project just uses Leopards bundled tools to ensure Safari can not execute other programs or write to files anywhere on the file-systems where it is not supposed to write to and this gives way more security against exploits than a out of the box Safari has.
+This mini-project just uses Leopards bundled tools to ensure Safari can't execute other programs or write to files anywhere on the file-systems where it is not supposed to write to and this gives way more security against exploits than a out of the box Safari has.
 
 All this is based on what I found in [wishi's blog post](http://wishinet.blogspot.com/2009/03/applying-sandbox-exec-around-safari.html).
-
-Want to hear about some limitations? Just scroll down&hellip;
 
 
 ## Installation
@@ -24,7 +22,7 @@ $ mv /Applications/Safari.app/Contents/MacOS/Safari /Applications/Safari.app/Con
 $ cp sandboxed-safari.sh /Applications/Safari.app/Contents/MacOS/Safari
 </pre>
 
-5. After this, try restarting Safari and download a file.  If you can not download it to your home directory, everything should be working.
+5. After this, try restarting Safari and try to download a file.  If you can't save it to your home directory, everything should be working.
 
 
 ## Limitations
