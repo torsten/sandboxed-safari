@@ -1,12 +1,12 @@
 (version 1)
-(debug deny) ; Use (debug all) to see every action)
+; Use (debug all) to see every action)
+(debug deny)
+(deny default)
+(import "/usr/share/sandbox/bsd.sb")
 (allow network-outbound)
 (allow signal)
-(allow ipc-posix-shm) ; Needed for POSIX shared memory
 (allow sysctl-read)
-(allow file-read-metadata)
-(allow signal)
-(allow process-exec (regex "^/Applications/Safari.app/Contents/MacOS")) 
+(allow process-exec (regex "^/Applications/Safari.app/")) 
 (allow mach-lookup)
 
 ;; Read anything
@@ -17,19 +17,15 @@
 (regex
 ; Required for converting .ps to .pdf on the fly
 #"^/Library/Caches/"
-#"^/dev/dtracehelper"
-#"^/private/tmp"
-#"^/private/var/folders/"
-#"^/private/var/tmp"
 #"^HOME/Downloads/"
 #"^HOME/Library/Caches/"
 #"^HOME/Library/Cookies/"
 #"^HOME/Library/Keychains/"
-; CoreFoundation used temp files when writing settings
-#"^HOME/Library/Preferences/cfx"
-#"^HOME/Library/Preferences/com.apple.Safari."
+#"^HOME/Library/Preferences/"
 #"^HOME/Library/Safari/"
+#"^/dev/dtracehelper"
+#"^/private/tmp"
+#"^/private/var/folders"
+#"^/private/var/tmp"
 )
 )
-
-(deny default)
