@@ -16,14 +16,14 @@ All this is based on what I found in [wishi's blog post](http://wishinet.blogspo
 ## Installation
 
 1. Grab the tarball from [GitHub](http://github.com/torsten/sandboxed-safari/tarball/master).
-2. Extract it <pre>$ tar vxzf torsten-sandboxed-safari&lt;TAB>.tar.gz</pre>
+2. Extract it <pre>tar vxzf torsten-sandboxed-safari&lt;TAB>.tar.gz</pre>
 2. Switch to the directory <pre>cd torsten-sandboxed-safari&lt;TAB></pre>
-3. Run the customize.rb script <pre>$ ruby customize.rb</pre> This will patch the policy file and the wrapper script with the locations of the files on your Mac.  You can also customize the 2 files on your own (it's not much work).  But just using the script is way more convenient.
+3. Run the customize.rb script <pre>ruby customize.rb</pre> This will patch the policy file and the wrapper script with the locations of the files on your Mac.  You can also customize the 2 files on your own (it's not much work).  But just using the script is way more convenient.
 
 4. Do what it says <pre>
-$ mv /Applications/Safari.app/Contents/MacOS/Safari /Applications/Safari.app/Contents/MacOS/Safari.orig
-$ cp sandboxed-safari.sh /Applications/Safari.app/Contents/MacOS/Safari
-$ cp safari-policy.sb /Applications/Safari.app/Contents/MacOS/
+mv /Applications/Safari.app/Contents/MacOS/Safari /Applications/Safari.app/Contents/MacOS/Safari.orig
+cp sandboxed-safari.sh /Applications/Safari.app/Contents/MacOS/Safari
+cp safari-policy.sb /Applications/Safari.app/Contents/MacOS/
 </pre>
 
 5. After this, try restarting Safari and try to download a file.  If you can't save it to your home directory, everything should be working.
@@ -31,11 +31,11 @@ $ cp safari-policy.sb /Applications/Safari.app/Contents/MacOS/
 ## Uninstall
 
 1. Rename the original Safari executable <pre>
-$ mv /Applications/Safari.app/Contents/MacOS/Safari.orig /Applications/Safari.app/Contents/MacOS/Safari
+mv /Applications/Safari.app/Contents/MacOS/Safari.orig /Applications/Safari.app/Contents/MacOS/Safari
 </pre>
 
 2. Delete the policy file <pre>
-$ rm /Applications/Safari.app/Contents/MacOS/safari-policy.sb
+rm /Applications/Safari.app/Contents/MacOS/safari-policy.sb
 </pre>
 
 
