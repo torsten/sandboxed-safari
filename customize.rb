@@ -7,9 +7,16 @@ policy_file = 'safari-policy.sb'
 home = ENV['HOME']
 raise "Can't detect home-directory"  if home.nil?
 
+# Call with revert as single argument to create the default policy
+if $*.size == 1 and $*[0] == 'revert'
+  a, b = home, 'HOME'
+else
+  a, b = 'HOME', home
+end
+
 
 patched_policy = File.open(policy_file, 'rb') do |file|
-  file.readlines.join.gsub(/HOME/, home)
+  file.readlines.join.gsub(a, b)
 end
 
 File.open(policy_file, 'wb') do |file|

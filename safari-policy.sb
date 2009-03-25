@@ -24,6 +24,8 @@
 #"^/private/var/folders"
 #"^/private/var/tmp"
 #"^HOME/Downloads/"
+; Sogudi needs this to save its preferences
+#"^HOME/Library/Application Support/[^/]+$"
 #"^HOME/Library/Caches/"
 #"^HOME/Library/Cookies/"
 #"^HOME/Library/Keychains/"
