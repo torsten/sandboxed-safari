@@ -20,7 +20,7 @@ All this is based on what I found in [wishi's blog post](http://wishinet.blogspo
 2. Switch to the directory <pre>cd torsten-sandboxed-safari&lt;TAB></pre>
 3. Run the customize.rb script <pre>ruby customize.rb</pre> This will patch the policy file and the wrapper script with the locations of the files on your Mac.  You can also customize the 2 files on your own (it's not much work).  But just using the script is way more convenient.
 
-4. Do what it says <pre>
+4. Move all files to their proper locations <pre>
 mv /Applications/Safari.app/Contents/MacOS/Safari /Applications/Safari.app/Contents/MacOS/Safari.orig
 cp sandboxed-safari.sh /Applications/Safari.app/Contents/MacOS/Safari
 cp safari-policy.sb /Applications/Safari.app/Contents/MacOS/
