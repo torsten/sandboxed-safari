@@ -15,8 +15,8 @@ All this is based on what I found in [wishi's blog post](http://wishinet.blogspo
 
 ## Installation
 
-1. Grab the tarball from [GitHub](http://github.com/torsten/sandboxed-safari/tarball/master).
-2. Extract it <pre>tar vxzf torsten-sandboxed-safari&lt;TAB>.tar.gz</pre>
+1. Grab the [tarball](http://github.com/torsten/sandboxed-safari/tarball/master) from GitHub <pre>curl -L http://github.com/torsten/sandboxed-safari/tarball/master > sandboxed-safari.tgz</pre>
+2. Extract it <pre>tar vxzf sandboxed-safari.tgz</pre>
 2. Switch to the directory <pre>cd torsten-sandboxed-safari&lt;TAB></pre>
 3. Run the customize.rb script <pre>ruby customize.rb</pre> This will patch the policy file and the wrapper script with the locations of the files on your Mac.  You can also customize the 2 files on your own (it's not much work).  But just using the script is way more convenient.
 

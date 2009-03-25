@@ -11,10 +11,10 @@
 (allow process-exec (literal "/private/var/tmp"))
 (allow mach-lookup)
 
-;; Read anything
+; Read anything
 (allow file-read*)
 
-;; Allow to write these files:
+; Allow to write these files:
 (allow file-write*
 (regex
 ; Required for converting .ps to .pdf on the fly
